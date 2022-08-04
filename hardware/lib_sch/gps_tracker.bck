@@ -1,0 +1,31 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 1551TT
+F https://pt.mouser.com/datasheet/2/177/1551-1389869.pdf
+$ENDCMP
+#
+$CMP L70-R
+F https://www.quectel.com/UploadImage/Downlad/Quectel_L70-R_Series_Hardware_Design_V3.0.pdf
+$ENDCMP
+#
+$CMP L80-RE
+F file:///C:/Users/Ricardo/Dropbox/Projects/008.gps_tracker/gps_tracker_basic/datasheets/Quectel_L80-R_Hardware_Design_V1.3.pdf
+$ENDCMP
+#
+$CMP MCP1603T
+F https://pt.mouser.com/datasheet/2/268/22042a-51760.pdf
+$ENDCMP
+#
+$CMP SIM800L
+F https://img.filipeflop.com/files/download/Datasheet_SIM800L.pdf
+$ENDCMP
+#
+$CMP TPS63020
+F https://datasheet.lcsc.com/szlcsc/Texas-Instruments-TI-TPS63020DSJR_C15483.pdf
+$ENDCMP
+#
+$CMP USBLC6
+F https://www.st.com/resource/en/datasheet/usblc6-2.pdf
+$ENDCMP
+#
+#End Doc Library

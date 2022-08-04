@@ -1,0 +1,1058 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 4
+Title "GPS Tracker Basic"
+Date "2020-11-07"
+Rev "1"
+Comp "Sevlacnog Enterprises"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 1700 1350 0    50   Output ~ 0
+3V3
+Wire Wire Line
+	1700 1250 1900 1250
+Wire Wire Line
+	1700 1350 1900 1350
+Text Label 1900 1250 0    50   ~ 0
+5V
+Text Label 1900 1350 0    50   ~ 0
+3V3
+Text HLabel 1700 1250 0    50   Output ~ 0
+5V
+Text HLabel 1700 1450 0    50   Output ~ 0
+4V
+Wire Wire Line
+	1700 1450 1900 1450
+Text Label 1900 1450 0    50   ~ 0
+4V
+Text HLabel 1700 1150 0    50   Output ~ 0
+VUSB
+Wire Wire Line
+	1700 1150 1900 1150
+Text Label 1900 1150 0    50   ~ 0
+VUSB
+Text Label 6700 5850 0    50   ~ 0
+3V3
+Wire Wire Line
+	6500 5850 6700 5850
+Wire Wire Line
+	6500 5900 6500 5850
+Connection ~ 6500 5850
+Wire Wire Line
+	6200 5850 6500 5850
+Wire Wire Line
+	6500 6300 6500 6200
+Wire Wire Line
+	5900 6300 6500 6300
+Wire Wire Line
+	5900 6300 5900 6250
+Wire Wire Line
+	5250 6200 5250 6300
+Connection ~ 5900 6300
+Wire Wire Line
+	5900 6300 5250 6300
+Wire Wire Line
+	5900 6350 5900 6300
+Wire Wire Line
+	5500 5950 5500 5850
+Wire Wire Line
+	5600 5950 5500 5950
+$Comp
+L power:GND #PWR027
+U 1 1 5FA56CC2
+P 5900 6350
+F 0 "#PWR027" H 5900 6100 50  0001 C CNN
+F 1 "GND" H 5905 6177 50  0000 C CNN
+F 2 "" H 5900 6350 50  0001 C CNN
+F 3 "" H 5900 6350 50  0001 C CNN
+	1    5900 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 5850 5250 5850
+Wire Wire Line
+	5250 5850 5050 5850
+Connection ~ 5250 5850
+Wire Wire Line
+	5250 5900 5250 5850
+Connection ~ 5500 5850
+Wire Wire Line
+	5600 5850 5500 5850
+$Comp
+L Device:C C?
+U 1 1 5FB2BBD9
+P 6500 6050
+AR Path="/5FB2BBD9" Ref="C?"  Part="1" 
+AR Path="/5FA2E6A4/5FB2BBD9" Ref="C?"  Part="1" 
+AR Path="/5FA4B2FD/5FB2BBD9" Ref="C29"  Part="1" 
+F 0 "C29" H 6500 6150 50  0000 L CNN
+F 1 "1uF" H 6500 5950 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6538 5900 50  0001 C CNN
+F 3 "Samsung-Electro-Mechanics-CL10A105KB8NNNC_C15849.pdf" H 6500 6050 50  0001 C CNN
+F 4 "C15849" H 6500 6050 50  0001 C CNN "LCSC"
+F 5 "Samsung Electro-Mechanics" H 6500 6050 50  0001 C CNN "Manufacturer"
+F 6 "CL10A105KB8NNNC" H 6500 6050 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" H 6500 6050 50  0001 C CNN "Supplier"
+F 8 "C15849" H 6500 6050 50  0001 C CNN "Supplier PN"
+	1    6500 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FB2757C
+P 5250 6050
+AR Path="/5FB2757C" Ref="C?"  Part="1" 
+AR Path="/5FA2E6A4/5FB2757C" Ref="C?"  Part="1" 
+AR Path="/5FA4B2FD/5FB2757C" Ref="C27"  Part="1" 
+F 0 "C27" H 5250 6150 50  0000 L CNN
+F 1 "1uF" H 5250 5950 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5288 5900 50  0001 C CNN
+F 3 "Samsung-Electro-Mechanics-CL10A105KB8NNNC_C15849.pdf" H 5250 6050 50  0001 C CNN
+F 4 "C15849" H 5250 6050 50  0001 C CNN "LCSC"
+F 5 "Samsung Electro-Mechanics" H 5250 6050 50  0001 C CNN "Manufacturer"
+F 6 "CL10A105KB8NNNC" H 5250 6050 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" H 5250 6050 50  0001 C CNN "Supplier"
+F 8 "C15849" H 5250 6050 50  0001 C CNN "Supplier PN"
+	1    5250 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:LP5907MFX-3.3 U9
+U 1 1 5FA3721A
+P 5900 5950
+F 0 "U9" H 5900 6317 50  0000 C CNN
+F 1 "LP5907MFX-3.3" H 5900 6226 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 5900 6300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lp5907.pdf" H 5900 6450 50  0001 C CNN
+F 4 "C80670" H 5900 5950 50  0001 C CNN "LCSC"
+F 5 "Texas Instruments" H 5900 5950 50  0001 C CNN "Manufacturer"
+F 6 "LP5907MFX-3.3/NOPB" H 5900 5950 50  0001 C CNN "Mfr. PN"
+F 7 "Mouser" H 5900 5950 50  0001 C CNN "Supplier"
+F 8 "595-LP5907QMFX-3.3Q1 " H 5900 5950 50  0001 C CNN "Supplier PN"
+	1    5900 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 4650 5400 4650
+Wire Wire Line
+	5200 4150 5400 4150
+Wire Wire Line
+	5200 4350 5400 4350
+Connection ~ 5200 4150
+Wire Wire Line
+	4950 4150 5200 4150
+$Comp
+L power:GND #PWR025
+U 1 1 5FA40037
+P 4200 4700
+F 0 "#PWR025" H 4200 4450 50  0001 C CNN
+F 1 "GND" H 4300 4600 50  0000 C CNN
+F 2 "" H 4200 4700 50  0001 C CNN
+F 3 "" H 4200 4700 50  0001 C CNN
+	1    4200 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C23
+U 1 1 5FA44FDF
+P 4450 4350
+F 0 "C23" H 4450 4450 50  0000 L CNN
+F 1 "10uF" H 4450 4250 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4488 4200 50  0001 C CNN
+F 3 "Samsung-Electro-Mechanics-CL10A106KP8NNNC_C19702.pdf" H 4450 4350 50  0001 C CNN
+F 4 "C19702" H 4450 4350 50  0001 C CNN "LCSC"
+F 5 "Samsung Electro-Mechanics" H 4450 4350 50  0001 C CNN "Manufacturer"
+F 6 "CL10A106KP8NNNC" H 4450 4350 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" H 4450 4350 50  0001 C CNN "Supplier"
+F 8 "C19702" H 4450 4350 50  0001 C CNN "Supplier PN"
+	1    4450 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C22
+U 1 1 5FA56CAE
+P 4200 4350
+F 0 "C22" H 4200 4450 50  0000 L CNN
+F 1 "10uF" H 4200 4250 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4238 4200 50  0001 C CNN
+F 3 "Samsung-Electro-Mechanics-CL10A106KP8NNNC_C19702.pdf" H 4200 4350 50  0001 C CNN
+F 4 "C19702" H 4200 4350 50  0001 C CNN "LCSC"
+F 5 "Samsung Electro-Mechanics" H 4200 4350 50  0001 C CNN "Manufacturer"
+F 6 "CL10A106KP8NNNC" H 4200 4350 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" H 4200 4350 50  0001 C CNN "Supplier"
+F 8 "C19702" H 4200 4350 50  0001 C CNN "Supplier PN"
+	1    4200 4350
+	1    0    0    -1  
+$EndComp
+Text Label 4050 3950 0    50   ~ 0
+5V
+$Comp
+L Device:C C?
+U 1 1 5FA81348
+P 4950 4350
+AR Path="/5FA81348" Ref="C?"  Part="1" 
+AR Path="/5FA2E6A4/5FA81348" Ref="C?"  Part="1" 
+AR Path="/5FA4B2FD/5FA81348" Ref="C25"  Part="1" 
+F 0 "C25" H 4950 4450 50  0000 L CNN
+F 1 "100nF" H 4950 4250 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4988 4200 50  0001 C CNN
+F 3 "Samsung-Electro-Mechanics-CL05B104KO5NNNC_C1525.pdf" H 4950 4350 50  0001 C CNN
+F 4 "C1525" H 4950 4350 50  0001 C CNN "LCSC"
+F 5 "Samsung Electro-Mechanics" H 4950 4350 50  0001 C CNN "Manufacturer"
+F 6 "CL05B104KO5NNNC" H 4950 4350 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" H 4950 4350 50  0001 C CNN "Supplier"
+F 8 "C1525" H 4950 4350 50  0001 C CNN "Supplier PN"
+	1    4950 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 4200 4950 4150
+Wire Wire Line
+	4950 4500 4950 4650
+Wire Wire Line
+	4200 4650 4450 4650
+Connection ~ 4700 3950
+Wire Wire Line
+	4700 3950 4700 4200
+Wire Wire Line
+	4700 3950 4450 3950
+Connection ~ 4450 3950
+Wire Wire Line
+	4450 3950 4450 4200
+Wire Wire Line
+	4200 3950 4050 3950
+Wire Wire Line
+	4450 3950 4200 3950
+Connection ~ 4200 3950
+Wire Wire Line
+	4200 3950 4200 4200
+Wire Wire Line
+	4200 4650 4200 4700
+Wire Wire Line
+	4200 4500 4200 4650
+Connection ~ 4200 4650
+Wire Wire Line
+	4450 4500 4450 4650
+Connection ~ 4450 4650
+Wire Wire Line
+	4450 4650 4700 4650
+Wire Wire Line
+	4700 4500 4700 4650
+Connection ~ 4950 4650
+Connection ~ 4700 4650
+Wire Wire Line
+	4700 4650 4950 4650
+Text Label 8150 3950 0    50   ~ 0
+4V
+Wire Wire Line
+	7950 4300 7950 4450
+Wire Wire Line
+	7450 4450 7450 4300
+Wire Wire Line
+	7950 4450 7700 4450
+Wire Wire Line
+	7700 4450 7450 4450
+Connection ~ 7700 4450
+Wire Wire Line
+	7700 4300 7700 4450
+Wire Wire Line
+	7950 3950 8150 3950
+Connection ~ 7950 3950
+Wire Wire Line
+	7950 3950 7950 4000
+Wire Wire Line
+	7700 3950 7950 3950
+Connection ~ 7700 3950
+Wire Wire Line
+	7700 3950 7700 4000
+$Comp
+L Device:C C32
+U 1 1 5FB03ED7
+P 7950 4150
+F 0 "C32" H 7950 4250 50  0000 L CNN
+F 1 "22uF" H 7950 4050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7988 4000 50  0001 C CNN
+F 3 "Samsung-Electro-Mechanics-CL21A226MAQNNNE_C45783.pdf" H 7950 4150 50  0001 C CNN
+F 4 "C45783" H 7950 4150 50  0001 C CNN "LCSC"
+F 5 "Samsung Electro-Mechanics" H 7950 4150 50  0001 C CNN "Manufacturer"
+F 6 "CL21A226MAQNNNE" H 7950 4150 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" H 7950 4150 50  0001 C CNN "Supplier"
+F 8 "C45783" H 7950 4150 50  0001 C CNN "Supplier PN"
+	1    7950 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C31
+U 1 1 5FA56CBE
+P 7700 4150
+F 0 "C31" H 7700 4250 50  0000 L CNN
+F 1 "22uF" H 7700 4050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7738 4000 50  0001 C CNN
+F 3 "Samsung-Electro-Mechanics-CL21A226MAQNNNE_C45783.pdf" H 7700 4150 50  0001 C CNN
+F 4 "C45783" H 7700 4150 50  0001 C CNN "LCSC"
+F 5 "Samsung Electro-Mechanics" H 7700 4150 50  0001 C CNN "Manufacturer"
+F 6 "CL21A226MAQNNNE" H 7700 4150 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" H 7700 4150 50  0001 C CNN "Supplier"
+F 8 "C45783" H 7700 4150 50  0001 C CNN "Supplier PN"
+	1    7700 4150
+	1    0    0    -1  
+$EndComp
+Connection ~ 7450 4450
+Wire Wire Line
+	7450 4500 7450 4450
+$Comp
+L power:GND #PWR032
+U 1 1 5FAFB522
+P 7450 4500
+F 0 "#PWR032" H 7450 4250 50  0001 C CNN
+F 1 "GND" H 7550 4400 50  0000 C CNN
+F 2 "" H 7450 4500 50  0001 C CNN
+F 3 "" H 7450 4500 50  0001 C CNN
+	1    7450 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 4800 7150 4800
+Wire Wire Line
+	7050 4450 7050 4800
+Wire Wire Line
+	7450 3950 7700 3950
+Connection ~ 7450 3950
+Wire Wire Line
+	7450 3950 7450 4000
+Wire Wire Line
+	7050 3950 7450 3950
+Connection ~ 7050 3950
+Wire Wire Line
+	7050 4150 7050 3950
+Connection ~ 7050 4800
+Wire Wire Line
+	6600 4800 7050 4800
+$Comp
+L Device:C C30
+U 1 1 5FAEF228
+P 7450 4150
+F 0 "C30" H 7450 4250 50  0000 L CNN
+F 1 "22uF" H 7450 4050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7488 4000 50  0001 C CNN
+F 3 "Samsung-Electro-Mechanics-CL21A226MAQNNNE_C45783.pdf" H 7450 4150 50  0001 C CNN
+F 4 "C45783" H 7450 4150 50  0001 C CNN "LCSC"
+F 5 "Samsung Electro-Mechanics" H 7450 4150 50  0001 C CNN "Manufacturer"
+F 6 "CL21A226MAQNNNE" H 7450 4150 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" H 7450 4150 50  0001 C CNN "Supplier"
+F 8 "C45783" H 7450 4150 50  0001 C CNN "Supplier PN"
+	1    7450 4150
+	1    0    0    -1  
+$EndComp
+Text HLabel 7150 4800 2    50   Output ~ 0
+PGOOD
+Wire Wire Line
+	6300 4500 6600 4500
+Wire Wire Line
+	6600 4800 6600 4500
+Wire Wire Line
+	6750 4600 6750 4550
+$Comp
+L power:GND #PWR030
+U 1 1 5FADAB2A
+P 6750 4600
+F 0 "#PWR030" H 6750 4350 50  0001 C CNN
+F 1 "GND" H 6850 4500 50  0000 C CNN
+F 2 "" H 6750 4600 50  0001 C CNN
+F 3 "" H 6750 4600 50  0001 C CNN
+	1    6750 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 4250 6400 4250
+Wire Wire Line
+	6400 4700 6400 4650
+Wire Wire Line
+	6300 4150 6400 4150
+Wire Wire Line
+	6400 4150 6400 4250
+Wire Wire Line
+	6300 4050 6400 4050
+Wire Wire Line
+	6400 4050 6400 3950
+Connection ~ 6400 3950
+Wire Wire Line
+	6300 3950 6400 3950
+$Comp
+L Device:R R32
+U 1 1 5FA56CBA
+P 7050 4300
+F 0 "R32" H 7100 4300 50  0000 L CNN
+F 1 "1M" V 7050 4250 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6980 4300 50  0001 C CNN
+F 3 "Uniroyal-Elec-0603WAF1004T5E_C22935.pdf" H 7050 4300 50  0001 C CNN
+F 4 "C22935" H 7050 4300 50  0001 C CNN "LCSC"
+F 5 "Uniroyal Elec" H 7050 4300 50  0001 C CNN "Manufacturer"
+F 6 "0603WAF1004T5E" H 7050 4300 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" H 7050 4300 50  0001 C CNN "Supplier"
+F 8 "C22935" H 7050 4300 50  0001 C CNN "Supplier PN"
+	1    7050 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R31
+U 1 1 5FA56CB9
+P 6750 4400
+F 0 "R31" H 6800 4400 50  0000 L CNN
+F 1 "150k" V 6750 4300 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6680 4400 50  0001 C CNN
+F 3 "Uniroyal-Elec-0603WAF1503T5E_C22807.pdf" H 6750 4400 50  0001 C CNN
+F 4 "C22807" H 6750 4400 50  0001 C CNN "LCSC"
+F 5 "Uniroyal Elec" H 6750 4400 50  0001 C CNN "Manufacturer"
+F 6 "0603WAF1503T5E" H 6750 4400 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" H 6750 4400 50  0001 C CNN "Supplier"
+F 8 "C22807" H 6750 4400 50  0001 C CNN "Supplier PN"
+	1    6750 4400
+	1    0    0    -1  
+$EndComp
+Connection ~ 6750 4250
+Wire Wire Line
+	7050 3950 6750 3950
+Wire Wire Line
+	6400 3950 6750 3950
+Connection ~ 6750 3950
+$Comp
+L Device:R R30
+U 1 1 5FAAD8E7
+P 6750 4100
+F 0 "R30" H 6800 4100 50  0000 L CNN
+F 1 "1M" V 6750 4050 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6680 4100 50  0001 C CNN
+F 3 "Uniroyal-Elec-0603WAF1004T5E_C22935.pdf" H 6750 4100 50  0001 C CNN
+F 4 "C22935" H 6750 4100 50  0001 C CNN "LCSC"
+F 5 "Uniroyal Elec" H 6750 4100 50  0001 C CNN "Manufacturer"
+F 6 "0603WAF1004T5E" H 6750 4100 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" H 6750 4100 50  0001 C CNN "Supplier"
+F 8 "C22935" H 6750 4100 50  0001 C CNN "Supplier PN"
+	1    6750 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3950 5300 3950
+Wire Wire Line
+	5300 3950 5400 3950
+Connection ~ 5300 3950
+Wire Wire Line
+	5300 4050 5300 3950
+Wire Wire Line
+	5400 4050 5300 4050
+Wire Wire Line
+	6300 4650 6400 4650
+$Comp
+L power:GND #PWR029
+U 1 1 5FA406B5
+P 6400 4700
+F 0 "#PWR029" H 6400 4450 50  0001 C CNN
+F 1 "GND" H 6500 4600 50  0000 C CNN
+F 2 "" H 6400 4700 50  0001 C CNN
+F 3 "" H 6400 4700 50  0001 C CNN
+	1    6400 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 3750 6400 3450
+Wire Wire Line
+	6300 3750 6400 3750
+Wire Wire Line
+	6400 3450 6000 3450
+Connection ~ 6400 3750
+Wire Wire Line
+	6400 3850 6400 3750
+Wire Wire Line
+	6300 3850 6400 3850
+Wire Wire Line
+	5300 3750 5300 3450
+Wire Wire Line
+	5400 3750 5300 3750
+Wire Wire Line
+	5300 3450 5700 3450
+Connection ~ 5300 3750
+Wire Wire Line
+	5300 3850 5300 3750
+Wire Wire Line
+	5400 3850 5300 3850
+$Comp
+L Device:L L3
+U 1 1 5FA38902
+P 5850 3450
+F 0 "L3" V 6040 3450 50  0000 C CNN
+F 1 "1.5uH" V 5949 3450 50  0000 C CNN
+F 2 "Inductor_SMD:L_Bourns_SRN6045TA" H 5850 3450 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Sunlord-MWSA0603-1R5MT_C148166.pdf" H 5850 3450 50  0001 C CNN
+F 4 "-" V 5850 3450 50  0001 C CNN "LCSC"
+F 5 "Bourns" V 5850 3450 50  0001 C CNN "Manufacturer"
+F 6 "SRN6045TA-1R5Y " V 5850 3450 50  0001 C CNN "Mfr. PN"
+F 7 "Mouser" V 5850 3450 50  0001 C CNN "Supplier"
+F 8 "652-SRN6045TA-1R5Y" V 5850 3450 50  0001 C CNN "Supplier PN"
+	1    5850 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L gps_tracker:TPS63020 U8
+U 1 1 5FA56C9B
+P 5850 4200
+F 0 "U8" H 5850 4875 50  0000 C CNN
+F 1 "TPS63020" H 5850 4784 50  0000 C CNN
+F 2 "gps_tracker:QFN14_P0.5_4.15x3.15_wThermalVias" H 5850 4850 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Texas-Instruments-TI-TPS63020DSJR_C15483.pdf" H 5350 4400 50  0001 C CNN
+F 4 "C15483" H 5850 4950 50  0001 C CNN "LCSC"
+F 5 "Texas Instruments" H 5850 5050 50  0001 C CNN "Manufacturer"
+F 6 "TPS63020DSJR" H 5850 5150 50  0001 C CNN "Mfr. PN"
+F 7 "Mouser" H 5850 3550 50  0001 C CNN "Supplier"
+F 8 "595-TPS63020DSJR" H 5850 3450 50  0001 C CNN "Supplier PN"
+	1    5850 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FC403BC
+P 6350 1900
+AR Path="/5FB9DD02/5FC403BC" Ref="R?"  Part="1" 
+AR Path="/5FA23A57/5FC403BC" Ref="R?"  Part="1" 
+AR Path="/5FA2E6A4/5FC403BC" Ref="R?"  Part="1" 
+AR Path="/5FA4B2FD/5FC403BC" Ref="R29"  Part="1" 
+F 0 "R29" H 6450 1900 50  0000 C CNN
+F 1 "10k" V 6350 1900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 6280 1900 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0402WGF1002TCE_C25744.pdf" H 6350 1900 50  0001 C CNN
+F 4 "C25744" V 6350 1900 50  0001 C CNN "LCSC"
+F 5 "Uniroyal Elec" V 6350 1900 50  0001 C CNN "Manufacturer"
+F 6 "0402WGF1002TCE" V 6350 1900 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" V 6350 1900 50  0001 C CNN "Supplier"
+F 8 "C25744" V 6350 1900 50  0001 C CNN "Supplier PN"
+	1    6350 1900
+	1    0    0    -1  
+$EndComp
+Text Notes 6850 2800 0    50   ~ 0
+max charge rate @ 500 mA
+Text Label 4850 1700 0    50   ~ 0
+VUSB
+Text Label 7650 2350 0    50   ~ 0
+5V
+Wire Wire Line
+	4850 1700 6350 1700
+Wire Wire Line
+	7100 3000 6850 3000
+$Comp
+L power:GND #PWR?
+U 1 1 5FA4AA6C
+P 6850 3000
+AR Path="/5FA4AA6C" Ref="#PWR?"  Part="1" 
+AR Path="/5FA2E6A4/5FA4AA6C" Ref="#PWR0109"  Part="1" 
+AR Path="/5FA4B2FD/5FA4AA6C" Ref="#PWR031"  Part="1" 
+F 0 "#PWR031" H 6850 2750 50  0001 C CNN
+F 1 "GND" H 6950 2900 50  0000 C CNN
+F 2 "" H 6850 3000 50  0001 C CNN
+F 3 "" H 6850 3000 50  0001 C CNN
+	1    6850 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 2900 6850 2900
+Text Label 6850 2900 0    50   ~ 0
+VBAT
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5FA56CAC
+P 7300 2900
+AR Path="/5FA56CAC" Ref="J?"  Part="1" 
+AR Path="/5FA2E6A4/5FA56CAC" Ref="J?"  Part="1" 
+AR Path="/5FA4B2FD/5FA56CAC" Ref="J3"  Part="1" 
+F 0 "J3" H 7380 2892 50  0000 L CNN
+F 1 "Battery" H 7380 2801 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 7300 2900 50  0001 C CNN
+F 3 "~" H 7300 2900 50  0001 C CNN
+F 4 "-" H 7300 2900 50  0001 C CNN "LCSC"
+F 5 "-" H 7300 2900 50  0001 C CNN "Manufacturer"
+F 6 "-" H 7300 2900 50  0001 C CNN "Mfr. PN"
+	1    7300 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 1700 6900 1700
+Wire Wire Line
+	7500 1700 7500 2350
+Wire Wire Line
+	7500 1700 7350 1700
+Wire Wire Line
+	6900 1700 6900 2050
+Wire Wire Line
+	6350 1700 6350 1750
+Connection ~ 6350 1700
+Connection ~ 6900 1700
+Wire Wire Line
+	6900 1700 6350 1700
+Wire Wire Line
+	6350 2100 6350 2050
+$Comp
+L power:GND #PWR?
+U 1 1 5FA56CAB
+P 6350 2100
+AR Path="/5FA56CAB" Ref="#PWR?"  Part="1" 
+AR Path="/5FA2E6A4/5FA56CAB" Ref="#PWR0108"  Part="1" 
+AR Path="/5FA4B2FD/5FA56CAB" Ref="#PWR028"  Part="1" 
+F 0 "#PWR028" H 6350 1850 50  0001 C CNN
+F 1 "GND" H 6355 1927 50  0000 C CNN
+F 2 "" H 6350 2100 50  0001 C CNN
+F 3 "" H 6350 2100 50  0001 C CNN
+	1    6350 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 2100 4850 1700
+Wire Wire Line
+	4850 2100 4850 2200
+Connection ~ 4850 2100
+Wire Wire Line
+	5200 2100 4850 2100
+Wire Wire Line
+	5850 2100 5850 2150
+Wire Wire Line
+	5200 2100 5200 2350
+Connection ~ 5200 2100
+Wire Wire Line
+	5850 2100 5200 2100
+Wire Wire Line
+	4850 2900 4850 2950
+Wire Wire Line
+	4850 2500 4850 2600
+$Comp
+L Device:LED_ALT D?
+U 1 1 5FA4AA37
+P 4850 2750
+AR Path="/5FA4AA37" Ref="D?"  Part="1" 
+AR Path="/5FA2E6A4/5FA4AA37" Ref="D?"  Part="1" 
+AR Path="/5FA4B2FD/5FA4AA37" Ref="D4"  Part="1" 
+F 0 "D4" H 4850 2850 50  0000 C CNN
+F 1 "RED" H 4850 2950 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 4850 2750 50  0001 C CNN
+F 3 "~" H 4850 2750 50  0001 C CNN
+F 4 "C84256" H 4850 2750 50  0001 C CNN "LCSC"
+F 5 "Foshan NationStar Optoelectronics" H 4850 2750 50  0001 C CNN "Manufacturer"
+F 6 "FC-2012HRK-620D" H 4850 2750 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" H 4850 2750 50  0001 C CNN "Supplier"
+F 8 "C84256" H 4850 2750 50  0001 C CNN "Supplier PN"
+	1    4850 2750
+	0    -1   -1   0   
+$EndComp
+Text Label 6450 2350 0    50   ~ 0
+VBAT
+Wire Wire Line
+	7500 2350 7650 2350
+Wire Wire Line
+	7100 2350 7500 2350
+Connection ~ 7500 2350
+$Comp
+L Device:Q_PMOS_GSD Q?
+U 1 1 5FA4AA18
+P 6900 2250
+AR Path="/5FA4AA18" Ref="Q?"  Part="1" 
+AR Path="/5FA2E6A4/5FA4AA18" Ref="Q?"  Part="1" 
+AR Path="/5FA4B2FD/5FA4AA18" Ref="Q3"  Part="1" 
+F 0 "Q3" V 7149 2250 50  0000 C CNN
+F 1 "Si2301CDS" V 7240 2250 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7100 2350 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/1808272021_Vishay-Intertech-SI2301CDS-T1-GE3_C10487.pdf" H 6900 2250 50  0001 C CNN
+F 4 "C10487" V 6900 2250 50  0001 C CNN "LCSC"
+F 5 "Vishay Intertech" V 6900 2250 50  0001 C CNN "Manufacturer"
+F 6 "SI2301CDS-T1-GE3" V 6900 2250 50  0001 C CNN "Mfr. PN"
+F 7 "Mouser" H 6900 2250 50  0001 C CNN "Supplier"
+F 8 "781-SI2301CDS-T1-GE3" H 6900 2250 50  0001 C CNN "Supplier PN"
+	1    6900 2250
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	6450 2700 6450 2950
+Wire Wire Line
+	6700 2350 6450 2350
+Wire Wire Line
+	6250 2350 6450 2350
+Connection ~ 6450 2350
+Wire Wire Line
+	6450 2400 6450 2350
+$Comp
+L Device:C C?
+U 1 1 5FA4AA0C
+P 5200 2750
+AR Path="/5FA4AA0C" Ref="C?"  Part="1" 
+AR Path="/5FA2E6A4/5FA4AA0C" Ref="C?"  Part="1" 
+AR Path="/5FA4B2FD/5FA4AA0C" Ref="C26"  Part="1" 
+F 0 "C26" H 5100 2850 50  0000 L CNN
+F 1 "1uF" H 5050 2650 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5238 2600 50  0001 C CNN
+F 3 "Samsung-Electro-Mechanics-CL10A105KB8NNNC_C15849.pdf" H 5200 2750 50  0001 C CNN
+F 4 "C15849" H 5200 2750 50  0001 C CNN "LCSC"
+F 5 "Samsung Electro-Mechanics" H 5200 2750 50  0001 C CNN "Manufacturer"
+F 6 "CL10A105KB8NNNC" H 5200 2750 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" H 5200 2750 50  0001 C CNN "Supplier"
+F 8 "C15849" H 5200 2750 50  0001 C CNN "Supplier PN"
+	1    5200 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FA4AA03
+P 6450 2550
+AR Path="/5FA4AA03" Ref="C?"  Part="1" 
+AR Path="/5FA2E6A4/5FA4AA03" Ref="C?"  Part="1" 
+AR Path="/5FA4B2FD/5FA4AA03" Ref="C28"  Part="1" 
+F 0 "C28" H 6450 2650 50  0000 L CNN
+F 1 "1uF" H 6450 2450 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6488 2400 50  0001 C CNN
+F 3 "Samsung-Electro-Mechanics-CL10A105KB8NNNC_C15849.pdf" H 6450 2550 50  0001 C CNN
+F 4 "C15849" H 6450 2550 50  0001 C CNN "LCSC"
+F 5 "Samsung Electro-Mechanics" H 6450 2550 50  0001 C CNN "Manufacturer"
+F 6 "CL10A105KB8NNNC" H 6450 2550 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" H 6450 2550 50  0001 C CNN "Supplier"
+F 8 "C15849" H 6450 2550 50  0001 C CNN "Supplier PN"
+	1    6450 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 2950 5200 2950
+Connection ~ 5200 2950
+Wire Wire Line
+	5200 2900 5200 2950
+Wire Wire Line
+	5200 2350 5450 2350
+Connection ~ 5200 2350
+Wire Wire Line
+	5200 2600 5200 2350
+Wire Wire Line
+	5400 2600 5400 2550
+Wire Wire Line
+	5200 2950 5400 2950
+Connection ~ 5400 2950
+Wire Wire Line
+	5400 2950 5400 2900
+Wire Wire Line
+	6450 2950 5850 2950
+Wire Wire Line
+	5400 2950 5850 2950
+Connection ~ 5850 2950
+Wire Wire Line
+	5850 3000 5850 2950
+Wire Wire Line
+	5850 2950 5850 2750
+$Comp
+L power:GND #PWR?
+U 1 1 5FA4A9EF
+P 5850 3000
+AR Path="/5FA4A9EF" Ref="#PWR?"  Part="1" 
+AR Path="/5FA2E6A4/5FA4A9EF" Ref="#PWR0107"  Part="1" 
+AR Path="/5FA4B2FD/5FA4A9EF" Ref="#PWR026"  Part="1" 
+F 0 "#PWR026" H 5850 2750 50  0001 C CNN
+F 1 "GND" H 5950 2900 50  0000 C CNN
+F 2 "" H 5850 3000 50  0001 C CNN
+F 3 "" H 5850 3000 50  0001 C CNN
+	1    5850 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 2550 5400 2550
+$Comp
+L Device:R R?
+U 1 1 5FA4A9E8
+P 5400 2750
+AR Path="/5FA4A9E8" Ref="R?"  Part="1" 
+AR Path="/5FA2E6A4/5FA4A9E8" Ref="R?"  Part="1" 
+AR Path="/5FA4B2FD/5FA4A9E8" Ref="R28"  Part="1" 
+F 0 "R28" H 5450 2750 50  0000 L CNN
+F 1 "2k" V 5400 2700 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5330 2750 50  0001 C CNN
+F 3 "Uniroyal-Elec-0402WGF2001TCE_C4109.pdf" H 5400 2750 50  0001 C CNN
+F 4 "C4109" H 5400 2750 50  0001 C CNN "LCSC"
+F 5 "Uniroyal Elec" H 5400 2750 50  0001 C CNN "Manufacturer"
+F 6 "0402WGF2001TCE" H 5400 2750 50  0001 C CNN "Mfr. PN"
+F 7 "Mouser" H 5400 2750 50  0001 C CNN "Supplier"
+F 8 "" H 5400 2750 50  0001 C CNN "Supplier PN"
+	1    5400 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky D?
+U 1 1 5FA4A9DF
+P 7200 1700
+AR Path="/5FA4A9DF" Ref="D?"  Part="1" 
+AR Path="/5FA2E6A4/5FA4A9DF" Ref="D?"  Part="1" 
+AR Path="/5FA4B2FD/5FA4A9DF" Ref="D5"  Part="1" 
+F 0 "D5" H 7200 1483 50  0000 C CNN
+F 1 "SS14" H 7200 1574 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 7200 1700 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/1903051003_MDD-Jiangsu-Yutai-Elec-SS14_C2480.pdf" H 7200 1700 50  0001 C CNN
+F 4 "C2480" H 7200 1700 50  0001 C CNN "LCSC"
+F 5 "MDD( Microdiode Electronics)" H 7200 1700 50  0001 C CNN "Manufacturer"
+F 6 "SS14" H 7200 1700 50  0001 C CNN "Mfr. PN"
+	1    7200 1700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Battery_Management:MCP73812T-420I-OT U?
+U 1 1 5FA56CA2
+P 5850 2450
+AR Path="/5FA56CA2" Ref="U?"  Part="1" 
+AR Path="/5FA2E6A4/5FA56CA2" Ref="U?"  Part="1" 
+AR Path="/5FA4B2FD/5FA56CA2" Ref="U7"  Part="1" 
+F 0 "U7" H 6050 2700 50  0000 L CNN
+F 1 "MCP73812T-420I-OT" H 5850 2150 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 5900 2200 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/22036b.pdf" H 5600 2700 50  0001 C CNN
+F 4 "C144308" H 5850 2450 50  0001 C CNN "LCSC"
+F 5 "Microchip Tech" H 5850 2450 50  0001 C CNN "Manufacturer"
+F 6 "MCP73812T-420I/OT" H 5850 2450 50  0001 C CNN "Mfr. PN"
+F 7 "Mouser" H 5850 2450 50  0001 C CNN "Supplier"
+F 8 "579-MCP73812T-420IOT " H 5850 2450 50  0001 C CNN "Supplier PN"
+	1    5850 2450
+	1    0    0    -1  
+$EndComp
+Text Label 3050 2300 0    50   ~ 0
+VUSB
+$Comp
+L Device:C C?
+U 1 1 5FA56CB6
+P 2600 2500
+AR Path="/5FA56CB6" Ref="C?"  Part="1" 
+AR Path="/5FA2E6A4/5FA56CB6" Ref="C?"  Part="1" 
+AR Path="/5FA4B2FD/5FA56CB6" Ref="C20"  Part="1" 
+F 0 "C20" H 2600 2600 50  0000 L CNN
+F 1 "100nF" H 2600 2400 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2638 2350 50  0001 C CNN
+F 3 "Samsung-Electro-Mechanics-CL05B104KO5NNNC_C1525.pdf" H 2600 2500 50  0001 C CNN
+F 4 "C1525" H 2600 2500 50  0001 C CNN "LCSC"
+F 5 "Samsung Electro-Mechanics" H 2600 2500 50  0001 C CNN "Manufacturer"
+F 6 "CL05B104KO5NNNC" H 2600 2500 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" H 2600 2500 50  0001 C CNN "Supplier"
+F 8 "C1525" H 2600 2500 50  0001 C CNN "Supplier PN"
+	1    2600 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FA56CB5
+P 2100 2500
+AR Path="/5FA56CB5" Ref="C?"  Part="1" 
+AR Path="/5FA2E6A4/5FA56CB5" Ref="C?"  Part="1" 
+AR Path="/5FA4B2FD/5FA56CB5" Ref="C19"  Part="1" 
+F 0 "C19" H 2100 2600 50  0000 L CNN
+F 1 "100nF" H 2100 2400 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2138 2350 50  0001 C CNN
+F 3 "Samsung-Electro-Mechanics-CL05B104KO5NNNC_C1525.pdf" H 2100 2500 50  0001 C CNN
+F 4 "C1525" H 2100 2500 50  0001 C CNN "LCSC"
+F 5 "Samsung Electro-Mechanics" H 2100 2500 50  0001 C CNN "Manufacturer"
+F 6 "CL05B104KO5NNNC" H 2100 2500 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" H 2100 2500 50  0001 C CNN "Supplier"
+F 8 "C1525" H 2100 2500 50  0001 C CNN "Supplier PN"
+	1    2100 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 2500 1600 2500
+Wire Wire Line
+	1600 2600 1700 2600
+Text HLabel 1700 2600 2    50   Output ~ 0
+D-
+Text HLabel 1700 2500 2    50   Output ~ 0
+D+
+Wire Wire Line
+	1700 2700 1600 2700
+Wire Wire Line
+	1200 2900 1200 3000
+Wire Wire Line
+	1300 3000 1300 3050
+Wire Wire Line
+	1700 3000 1300 3000
+Wire Wire Line
+	1200 3000 1300 3000
+Connection ~ 1300 3000
+Wire Wire Line
+	1300 2900 1300 3000
+Wire Wire Line
+	2100 2650 2100 2700
+Wire Wire Line
+	3050 2700 3050 2650
+Wire Wire Line
+	2100 2700 2600 2700
+Wire Wire Line
+	2600 2700 3050 2700
+Connection ~ 2600 2700
+Wire Wire Line
+	2600 2650 2600 2700
+Wire Wire Line
+	3050 2300 2600 2300
+Wire Wire Line
+	3050 2350 3050 2300
+Wire Wire Line
+	2600 2300 2600 2350
+Connection ~ 2600 2300
+Wire Wire Line
+	2550 2300 2600 2300
+Wire Wire Line
+	2100 2300 1600 2300
+Wire Wire Line
+	2250 2300 2100 2300
+Connection ~ 2100 2300
+Wire Wire Line
+	2100 2350 2100 2300
+$Comp
+L Device:L_Core_Ferrite L?
+U 1 1 5FA60218
+P 2400 2300
+AR Path="/5FA60218" Ref="L?"  Part="1" 
+AR Path="/5FA2E6A4/5FA60218" Ref="L?"  Part="1" 
+AR Path="/5FA4B2FD/5FA60218" Ref="L2"  Part="1" 
+F 0 "L2" V 2500 2300 50  0000 C CNN
+F 1 "330 Ohm" V 2350 2300 50  0000 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric" H 2400 2300 50  0001 C CNN
+F 3 "https://pt.mouser.com/datasheet/2/281/ENFA0005-1485072.pdf" H 2400 2300 50  0001 C CNN
+F 4 "-" V 2400 2300 50  0001 C CNN "LCSC"
+F 5 "Murata Electronics" V 2400 2300 50  0001 C CNN "Manufacturer"
+F 6 "BLM21PG331SN1D" V 2400 2300 50  0001 C CNN "Mfr. PN"
+F 7 "Mouser" V 2400 2300 50  0001 C CNN "Supplier"
+F 8 "81-BLM21P331SG" V 2400 2300 50  0001 C CNN "Supplier PN"
+	1    2400 2300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FA6020D
+P 1700 2850
+AR Path="/5FA6020D" Ref="R?"  Part="1" 
+AR Path="/5FA2E6A4/5FA6020D" Ref="R?"  Part="1" 
+AR Path="/5FA4B2FD/5FA6020D" Ref="R26"  Part="1" 
+F 0 "R26" V 1800 2850 50  0000 C CNN
+F 1 "100k" V 1700 2850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1630 2850 50  0001 C CNN
+F 3 "~" H 1700 2850 50  0001 C CNN
+F 4 "C25803" V 1700 2850 50  0001 C CNN "LCSC"
+F 5 "Uniroyal Elec" V 1700 2850 50  0001 C CNN "Manufacturer"
+F 6 "0603WAF1003T5E" V 1700 2850 50  0001 C CNN "Mfr. PN"
+F 7 "Mouser" V 1700 2850 50  0001 C CNN "Supplier"
+F 8 "" V 1700 2850 50  0001 C CNN "Supplier PN"
+	1    1700 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FA60207
+P 3050 2500
+AR Path="/5FA60207" Ref="C?"  Part="1" 
+AR Path="/5FA2E6A4/5FA60207" Ref="C?"  Part="1" 
+AR Path="/5FA4B2FD/5FA60207" Ref="C21"  Part="1" 
+F 0 "C21" H 3050 2600 50  0000 L CNN
+F 1 "4.7uF" H 3050 2400 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3088 2350 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Samsung-Electro-Mechanics-CL10A475KO8NNNC_C19666.pdf" H 3050 2500 50  0001 C CNN
+F 4 "C19666" H 3050 2500 50  0001 C CNN "LCSC"
+F 5 "SAMSUNG" H 3050 2500 50  0001 C CNN "Manufacturer"
+F 6 "CL10A475KO8NNNC" H 3050 2500 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" H 3050 2500 50  0001 C CNN "Supplier"
+F 8 "C19666" H 3050 2500 50  0001 C CNN "Supplier PN"
+	1    3050 2500
+	1    0    0    -1  
+$EndComp
+Connection ~ 3050 2700
+Wire Wire Line
+	3050 2750 3050 2700
+$Comp
+L power:GND #PWR?
+U 1 1 5FA56CB1
+P 3050 2750
+AR Path="/5FA56CB1" Ref="#PWR?"  Part="1" 
+AR Path="/5FA2E6A4/5FA56CB1" Ref="#PWR0111"  Part="1" 
+AR Path="/5FA4B2FD/5FA56CB1" Ref="#PWR024"  Part="1" 
+F 0 "#PWR024" H 3050 2500 50  0001 C CNN
+F 1 "GND" H 3150 2650 50  0000 C CNN
+F 2 "" H 3050 2750 50  0001 C CNN
+F 3 "" H 3050 2750 50  0001 C CNN
+	1    3050 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FA56CB0
+P 1300 3050
+AR Path="/5FA56CB0" Ref="#PWR?"  Part="1" 
+AR Path="/5FA2E6A4/5FA56CB0" Ref="#PWR0110"  Part="1" 
+AR Path="/5FA4B2FD/5FA56CB0" Ref="#PWR023"  Part="1" 
+F 0 "#PWR023" H 1300 2800 50  0001 C CNN
+F 1 "GND" H 1400 2950 50  0000 C CNN
+F 2 "" H 1300 3050 50  0001 C CNN
+F 3 "" H 1300 3050 50  0001 C CNN
+	1    1300 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Micro J?
+U 1 1 5FA601F1
+P 1300 2500
+AR Path="/5FA601F1" Ref="J?"  Part="1" 
+AR Path="/5FA2E6A4/5FA601F1" Ref="J?"  Part="1" 
+AR Path="/5FA4B2FD/5FA601F1" Ref="J2"  Part="1" 
+F 0 "J2" H 1357 2967 50  0000 C CNN
+F 1 "USB_B_Micro" H 1357 2876 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Amphenol_10118194_Horizontal" H 1450 2450 50  0001 C CNN
+F 3 "~" H 1450 2450 50  0001 C CNN
+F 4 "-" H 1300 2500 50  0001 C CNN "LCSC"
+F 5 "Amphenol" H 1300 2500 50  0001 C CNN "Manufacturer"
+F 6 "10118194-0001LF" H 1300 2500 50  0001 C CNN "Mfr. PN"
+F 7 "Mouser" H 1300 2500 50  0001 C CNN "Supplier"
+F 8 "649-10118194-0001LF" H 1300 2500 50  0001 C CNN "Supplier PN"
+	1    1300 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R27
+U 1 1 5FD6F674
+P 4850 2350
+F 0 "R27" V 4750 2350 50  0000 C CNN
+F 1 "330" V 4850 2350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 4780 2350 50  0001 C CNN
+F 3 "Uniroyal-Elec-0402WGF3300TCE_C25104.pdf" H 4850 2350 50  0001 C CNN
+F 4 "C25104" V 4850 2350 50  0001 C CNN "LCSC"
+F 5 "Uniroyal Elec" V 4850 2350 50  0001 C CNN "Manufacturer"
+F 6 "0402WGF3300TCE" V 4850 2350 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" V 4850 2350 50  0001 C CNN "Supplier"
+F 8 "C25104" V 4850 2350 50  0001 C CNN "Supplier PN"
+	1    4850 2350
+	-1   0    0    1   
+$EndComp
+Text Label 5050 5850 0    50   ~ 0
+4V
+Wire Wire Line
+	5200 4150 5200 4250
+Wire Wire Line
+	5200 4250 5400 4250
+Connection ~ 5200 4250
+Wire Wire Line
+	5200 4250 5200 4350
+$Comp
+L Device:C C?
+U 1 1 607E0E7B
+P 4700 4350
+AR Path="/607E0E7B" Ref="C?"  Part="1" 
+AR Path="/5FA2E6A4/607E0E7B" Ref="C?"  Part="1" 
+AR Path="/5FA4B2FD/607E0E7B" Ref="C24"  Part="1" 
+F 0 "C24" H 4700 4450 50  0000 L CNN
+F 1 "1uF" H 4700 4250 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4738 4200 50  0001 C CNN
+F 3 "Samsung-Electro-Mechanics-CL10A105KB8NNNC_C15849.pdf" H 4700 4350 50  0001 C CNN
+F 4 "C15849" H 4700 4350 50  0001 C CNN "LCSC"
+F 5 "Samsung Electro-Mechanics" H 4700 4350 50  0001 C CNN "Manufacturer"
+F 6 "CL10A105KB8NNNC" H 4700 4350 50  0001 C CNN "Mfr. PN"
+F 7 "LCSC" H 4700 4350 50  0001 C CNN "Supplier"
+F 8 "C15849" H 4700 4350 50  0001 C CNN "Supplier PN"
+	1    4700 4350
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

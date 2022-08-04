@@ -1,0 +1,11 @@
+main.c:82:5:main	8	static
+main.c:134:6:SystemClock_Config	96	static
+main.c:179:13:MX_I2C1_Init	8	static
+main.c:225:13:MX_SPI1_Init	8	static
+main.c:265:13:MX_USART1_UART_Init	8	static
+main.c:300:13:MX_USART2_UART_Init	8	static
+main.c:335:13:MX_GPIO_Init	56	static
+main.c:383:13:PUS_Init	8	static
+main.c:417:16:NMEA_Msg_Parser	16	static
+main.c:422:6:HAL_UART_RxCpltCallback	16	static
+main.c:440:6:Error_Handler	8	static,ignoring_inline_asm
